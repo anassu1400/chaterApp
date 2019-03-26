@@ -94,7 +94,7 @@ REST_FRAMEWORK = {
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-if(DEBUG){
+if(DEBUG):
     DATABASES = {
         'default': dj_database_url.config(
             default=config(
@@ -102,7 +102,7 @@ if(DEBUG){
                 default="sqlite:///" + os.path.join(BASE_DIR, 'db.sqlite3')
             ) 
     }
-}else{
+else:
     DATABASES = {
     'default': {
                     'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -113,7 +113,7 @@ if(DEBUG){
                     'PORT': '',
                 }
     }
-}
+
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
 
